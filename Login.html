@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Log In</title>
+        <link rel="stylesheet" href="logIn.css" />
+        <style></style>
+        <!-- Font linking for Commissioner font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Styles/login.css" />
+    </head>
+    <body>
+        <section>
+            <!-- Company logo -->
+            <img src="Images/greenball.png" />
+            <hr />
+            <!-- Heading for the login form -->
+            <h1>Log in</h1>
+            <form action="Welcome.html">
+                <!-- Subtitle text -->
+                <p>Please Fill Your Information:</p>
+                <!-- Input container for email or phone -->
+                <div class="input-container">
+                    <input type="text" id="email" placeholder="Email" />
+                    <div id="emailOrPhone-error" class="error-message"></div>
+                </div>
+                <!-- Input container for password -->
+                <div class="input-container">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                    />
+                    <div id="password-error" class="error-message"></div>
+                </div>
+                <!-- Log in button -->
+                <button type="submit" id="login">Log in</button>
+                <!-- Sign-up message -->
+                <div id="sign-up-message" class="sign-up-message">
+                    Invalid login credentials. Please sign up if you don't have
+                    an account.
+                </div>
+                <hr />
+                <!-- Sign up button -->
+                <button onclick="location.href = 'Signup.html' ">
+                    Sign up
+                </button>
+            </form>
+        </section>
+        <script src="JS/login.js"></script>
+    </body>
+</html>

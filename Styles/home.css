@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Commissioner", sans-serif;
+
+    color: white;
+    /*background-image: url(Images/Bitch.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container-head {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.img-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.logo {
+    font-weight: bold;
+    margin-right: 33px;
+}
+
+.logo span {
+    color: #00df69;
+}
+
+.container-head .btns {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    padding: 10px;
+    font-weight: bold;
+    margin-right: 33px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(0 0 0 /0.4);
+    color: white;
+}
+
+.container-head a {
+    color: white;
+}
+
+.btns button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-left: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #00df69;
+}
+
+.btns button:hover {
+    background-color: rgb(0 0 0 /0.4);
+    color: white;
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url("../Images/Bitch.jpg");
+    background-size: cover;
+    /* filter: blur(3px); */
+    background-position: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1250px;
+}
+
+.cont {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-3%);
+}
+.text-con h1 {
+    font-size: 72px;
+    text-transform: capitalize;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 15%;
+}
+.buttons button {
+    display: flex;
+    width: 240px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.reg {
+    background-color: white;
+}
+
+.sign {
+    background-color: #00df69;
+}
+
+.buttons button:hover {
+    background-color: rgb(0 0 0 /0.4);
+    color: white;
+}
+
+.vid {
+    display: flex;
+    min-height: 88vh;
+    background-image: url("../Images/Goal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 12vh;
+    padding: 0.3rem 0;
+}
+
+.title h1 {
+    text-transform: capitalize;
+    color: #009245;
+    font-size: 2.7rem;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GoalGenius</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Fonawesome  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="Styles/home.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container-head">
+                <a href=""
+                    ><img class="img-logo" src="Images/whiteball.png" alt=""
+                /></a>
+                <a href="Home.html"
+                    ><h2 class="logo">Goal<span>Genius</span></h2></a
+                >
+                <nav>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#howtouse">How To Use</a></li>
+                    </ul>
+                </nav>
+                <div class="btns">
+                    <button
+                        type="button"
+                        onclick="location.href= 'signup.html' "
+                    >
+                        SignUp
+                    </button>
+                    <button
+                        type="button"
+                        onclick="location.href= 'login.html' "
+                    >
+                        LogIn
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="home">
+            <div class="container">
+                <div class="cont">
+                    <div class="text-con">
+                        <h1>
+                            Hi their,<br />
+                            welcome to the GoalGenius
+                        </h1>
+                    </div>
+                    <div class="buttons">
+                        <button
+                            class="ref"
+                            type="button"
+                            onclick="location.href= 'signup.html' "
+                        >
+                            register now
+                        </button>
+                        <button
+                            class="sign"
+                            type="button"
+                            onclick="location.href= '#about' "
+                        >
+                            learn more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="howtouse">
+            <div class="title">
+                <h1>How To Use</h1>
+            </div>
+            <div class="vid">
+                <iframe
+                    width="915"
+                    height="450"
+                    src="https://www.youtube.com/embed/TkM_MwEkTYM?si=m-PJc0axfkCx9VbA"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
+        <script src="JS/home.js"></script>
+    </body>
+</html>

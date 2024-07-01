@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url("../Images/ball.png") center/cover no-repeat;
+    z-index: -1;
+}
+
+.container {
+    border: 2px solid #005f2d;
+    border-radius: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+h2,
+p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    color: #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+button {
+    color: white;
+    background-color: #005f2d;
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1400px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 1.5rem;
+    }
+    .button-container {
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+    .button-container {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    .button-container {
+        padding-bottom: 0.5rem;
+    }
+}

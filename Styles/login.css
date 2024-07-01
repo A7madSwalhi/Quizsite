@@ -1,0 +1,129 @@
+body {
+    background-image: url("../Images/audience.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    animation: changeImage 10s 2s infinite;
+    font-family: "Commissioner", sans-serif;
+}
+/* Keyframes for background image animation */
+@keyframes changeImage {
+    50% {
+        background-image: url("../Images/net.png");
+    }
+    100% {
+        background-image: url("../Images/audience.jpg");
+    }
+}
+section {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    padding: 20px;
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+    ); /* Added background color for better readability */
+    border-radius: 10px; /* Rounded corners */
+}
+img {
+    width: 80px;
+    margin: 0 0 0 2vw;
+}
+hr {
+    border: none;
+    background-color: rgba(0, 128, 0, 0.637);
+    height: 1px;
+    width: 90%;
+}
+h1 {
+    margin: 0 0 0 6vw;
+    font-size: 4ch;
+    font-weight: 500;
+}
+p {
+    margin: 2vh 0 0 6vw;
+}
+.input-container {
+    margin: 3vh 0 0 6vw;
+}
+input {
+    height: 52px;
+    width: 100%; /* Make inputs responsive */
+    text-indent: 10px;
+    border-radius: 3px;
+    border: 1px solid green;
+    outline: none;
+    font-size: large;
+    display: block;
+    margin-top: 5px;
+}
+input::placeholder {
+    color: rgba(0, 128, 0, 0.533);
+    font-size: large;
+}
+.error-message {
+    color: red; /* Change error message text to red */
+    font-size: small;
+    margin-top: 5px;
+}
+.sign-up-message {
+    color: red;
+    font-size: small;
+    margin-top: 5px;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+button {
+    height: 45px;
+    width: 50%; /* Adjusted for better responsiveness */
+    border-radius: 21px;
+    border: none;
+    background-color: rgb(49, 164, 104);
+    margin: 3vh 0 0 25%; /* Center the button */
+    font-size: larger;
+    color: white;
+    cursor: pointer;
+}
+/* Media queries for responsiveness */
+@media (max-width: 1400px) {
+    section {
+        width: 500px;
+        right: 50px;
+    }
+}
+@media (max-width: 1200px) {
+    section {
+        width: 450px;
+    }
+}
+@media (max-width: 992px) {
+    section {
+        width: 400px;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        width: 350px;
+        right: 20px;
+    }
+}
+@media (max-width: 576px) {
+    section {
+        width: 300px;
+        right: 10px;
+        top: 5px;
+        padding: 10px;
+    }
+}
+@media (max-width: 540px) {
+    section {
+        width: 280px;
+        right: 5px;
+        top: 5px;
+    }
+}
