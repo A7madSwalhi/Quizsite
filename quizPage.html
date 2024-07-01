@@ -4,39 +4,31 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Quiz Page</title>
-        <style></style>
+        <!-- <script>
+            let user = JSON.parse(sessionStorage.getItem("user"));
+
+            if (!sessionStorage.getItem("user")) {
+                location.href = "./preventNonUser.html";
+            }
+        </script> -->
         <link rel="stylesheet" href="Styles/Quizpage.css" />
     </head>
-    <body>
-        <div class="header"></div>
-        <div class="container">
-            <div class="content">
-                <div class="question">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean commodo ligula eget dolor.
-                </div>
-                <div class="options">
-                    <div class="option" data-label="A">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                    <div class="option" data-label="B">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                    <div class="option" data-label="C">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                    <div class="option" data-label="D">
-                        Lorem ipsum dolor sit amet
-                    </div>
-                </div>
-                <div class="navigation">
-                    <span>1/10</span>
-                    <a href="#">Next page</a>
-                </div>
-            </div>
-            <div class="timer" id="timer">10:00</div>
-        </div>
 
+    <body>
+        <div class="quiz-app">
+            <div class="quiz-info">
+                <div class="category">Category: <span>HTML</span></div>
+                <div class="count">Questions Count: <span></span></div>
+            </div>
+            <div class="quiz-area"></div>
+            <div class="answers-area"></div>
+            <button class="submit-button">Next</button>
+            <div class="bullets">
+                <div class="spans"></div>
+                <div class="countdown"></div>
+            </div>
+            <div class="results"></div>
+        </div>
         <script src="JS/Quizpage.js"></script>
     </body>
 </html>

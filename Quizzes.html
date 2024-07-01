@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script>
+            let user = JSON.parse(sessionStorage.getItem("user"));
+
+            if (!sessionStorage.getItem("user")) {
+                location.href = "./preventNonUser.html";
+            }
+        </script>
     </head>
     <body>
         <button id="0" class="quiz">Quiz One</button>

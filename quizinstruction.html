@@ -6,6 +6,13 @@
         <title>Document</title>
         <style></style>
         <link rel="stylesheet" href="Styles/quizinstruction.css" />
+        <script>
+            let user = JSON.parse(sessionStorage.getItem("user"));
+
+            if (!sessionStorage.getItem("user")) {
+                location.href = "./preventNonUser.html";
+            }
+        </script>
     </head>
 
     <body>
@@ -16,7 +23,7 @@
         <div class="container">
             <h2>Quizzes Instructions</h2>
             <p>
-                1. The quiz has 3 questions. <br />
+                1. The quiz has 10 questions. <br />
                 2. You have to complete the quiz in 10 minutes.<br />
                 3. The quiz will show one question at a time.<br />
                 4. You can't move to the next question before selecting an

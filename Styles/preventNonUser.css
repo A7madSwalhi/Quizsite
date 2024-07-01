@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+    position: relative; /* Ensures the .back container is positioned correctly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url("../Images/ball.png") center/cover no-repeat;
+    z-index: -1;
+}
+
+.container {
+    border: 2px solid #005f2d;
+    border-radius: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    width: 40%;
+    max-width: 600px; /* Ensures container doesn't become too wide on large screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+    position: relative;
+    z-index: 1; /* Ensures container is above background image */
+}
+
+#heading {
+    text-align: center; /* Centers heading text */
+    margin: 0; /* Removes default margin */
+}
+
+h1 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+h1 img {
+    height: 40px; /* Adjust the height to fit your design */
+    margin-left: 10px; /* Space between text and image */
+}
+
+p {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    color: #000;
+    margin: 1rem 0 1.5rem;
+    text-align: center; /* Centers text */
+    font-size: large;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem; /* Adds space between buttons */
+    padding-bottom: 2rem;
+}
+
+button {
+    color: white;
+    background-color: #005f2d;
+    height: 3rem;
+    width: 6rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem; /* Rounded corners */
+    cursor: pointer;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004a23; /* Darker shade on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1400px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 1.5rem;
+    }
+    .button-container {
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+    .button-container {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    .button-container {
+        padding-bottom: 0.5rem;
+    }
+}

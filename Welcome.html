@@ -21,6 +21,11 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="Styles/welcome.css" />
+        <script>
+            if (!sessionStorage.getItem("user")) {
+                location.href = "./preventNonUser.html";
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -57,9 +62,7 @@
                     <div class="text-con">
                         <h1>
                             Hi
-                            <span id="username" style="color: #00df69"
-                                >their</span
-                            >,<br />
+                            <span id="username">their</span>,<br />
                             welcome to the GoalGenius
                         </h1>
                     </div>
