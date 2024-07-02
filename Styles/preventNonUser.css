@@ -87,6 +87,10 @@ button:hover {
     background-color: #004a23; /* Darker shade on hover */
 }
 
+.im-logo {
+    cursor: pointer;
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 1400px) {
     .container {

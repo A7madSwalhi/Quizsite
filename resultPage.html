@@ -3,184 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quiz Result</title>
+        <title>Document</title>
+
+        <style></style>
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="Styles/resultpage.css" />
 
-        <style>
-            body {
-                font-family: "Commissioner", sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f5f5f5;
-            }
-
-            .header,
-            .buttons button,
-            th {
-                background-color: #00c853; /* Default green color */
-            }
-
-            .header {
-                padding: 40px;
-                height: 20vh;
-                text-align: center;
-                color: white;
-            }
-
-            .result-container {
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                margin-top: -100px;
-            }
-
-            .result-box {
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                text-align: center;
-                padding: 20px;
-                width: 400px;
-                max-width: 90%;
-            }
-
-            .result-box .circle {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                border: 5px solid;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 0 auto;
-                font-size: 24px;
-                background: conic-gradient(
-                    #00c853 0%,
-                    #00c853 100%
-                ); /* Default to fully filled */
-            }
-
-            .buttons {
-                margin-top: 20px;
-            }
-
-            .buttons button {
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                margin: 5px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease; /* Add smooth transition */
-            }
-
-            .buttons button:hover {
-                background-color: #00b045;
-            }
-
-            .table-container {
-                margin: 20px;
-                display: none;
-                justify-content: center;
-            }
-
-            table {
-                border-collapse: collapse;
-                width: 90%;
-                max-width: 600px;
-                font-size: smaller;
-            }
-
-            th,
-            td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: center;
-            }
-
-            th {
-                color: black;
-                background-color: white;
-            }
-
-            tr:nth-child(2n) {
-                background-color: rgb(213, 232, 207); /* Green for even rows */
-                color: rgb(6, 111, 41);
-            }
-
-            tr:nth-child(3n) {
-                background-color: rgb(236, 200, 197); /* Red for odd rows */
-                color: #b0393b;
-            }
-
-            tr:nth-child(5n) {
-                background-color: rgb(236, 200, 197); /* Red for odd rows */
-                color: #b0393b;
-            }
-
-            /* Responsive design */
-            @media (max-width: 1400px) {
-                .result-box {
-                    width: 350px;
-                }
-            }
-            @media (max-width: 1200px) {
-                .result-box {
-                    width: 300px;
-                }
-            }
-            @media (max-width: 992px) {
-                .result-box {
-                    width: 250px;
-                }
-            }
-            @media (max-width: 768px) {
-                .result-box {
-                    width: 220px;
-                }
-                .buttons button {
-                    padding: 8px 16px;
-                }
-            }
-            @media (max-width: 576px) {
-                .result-box {
-                    width: 200px;
-                    padding: 15px;
-                }
-                .buttons button {
-                    padding: 6px 12px;
-                    margin: 3px;
-                }
-                .result-box .circle {
-                    width: 80px;
-                    height: 80px;
-                    font-size: 20px;
-                }
-                table {
-                    width: 90%;
-                }
-            }
-            @media (max-width: 540px) {
-                .result-box {
-                    width: 180px;
-                    padding: 10px;
-                }
-                .buttons button {
-                    padding: 5px 10px;
-                    margin: 2px;
-                }
-                .result-box .circle {
-                    width: 70px;
-                    height: 70px;
-                    font-size: 18px;
-                }
-            }
-        </style>
         <script>
             let user = JSON.parse(sessionStorage.getItem("user"));
 
@@ -190,100 +24,33 @@
         </script>
     </head>
     <body>
-        <div class="header"></div>
+        <div class="ResultCard">
+            <h2>Result</h2>
 
-        <div class="result-container">
-            <div class="result-box">
-                <h2>Result</h2>
-                <div class="circle" id="result-circle">0 / 10</div>
-                <div class="buttons">
-                    <button onclick="showQuestions()">Show Answers</button>
-                    <a href="Welcome.html"><button>Home</button></a>
-                </div>
+            <div>
+                <h2>
+                    <span class="score">10</span> /
+                    <span class="totQues">10</span>
+                </h2>
             </div>
+
+            <button id="homeBtn" onclick="location.href = 'Welcome.html' ">
+                Home
+            </button>
+            <button id="showQustionsBtn">Show Answers</button>
         </div>
 
         <div class="table-container" id="table-container">
-            <table>
+            <table class="tabledata">
                 <tr>
                     <th>Question number</th>
                     <th>Question text</th>
                     <th>Your Answer</th>
                     <th>The Correct Answer</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Which language runs in a web browser?</td>
-                    <td>Row 1</td>
-                    <td>JavaScript</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>What does HTML stand for?</td>
-                    <td>Row 2</td>
-                    <td>Hyper Text Markup Language</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>What does CSS stand for?</td>
-                    <td>Row 3</td>
-                    <td>Cascading Style Sheets</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        The correct sequence of HTML tags for starting a webpage
-                        is?
-                    </td>
-                    <td>Row 4</td>
-                    <td>Angular</td>
-                </tr>
             </table>
         </div>
 
-        <script>
-            // Function to show the table of questions and answers
-            function showQuestions() {
-                document.getElementById("table-container").style.display =
-                    "flex";
-            }
-
-            // Function to set the color and filling of the result circle based on the score
-            function setCircleColor(score) {
-                const circle = document.getElementById("result-circle");
-                const color = score <= 5 ? "#c62828" : "#00c853"; // Red if score <= 5, green otherwise
-
-                // Set the border color and text color of the circle
-                circle.style.borderColor = color;
-                circle.style.color = color;
-
-                // Set the filling of the circle based on the score
-                circle.style.background = `conic-gradient(${color} ${
-                    score * 10
-                }%, #f5f5f5 ${score * 10}%)`;
-
-                // Change the background color of header, buttons, and table headers
-                // to match the color based on the score
-                const elementsToChange = document.querySelectorAll(
-                    ".header, .buttons button"
-                );
-                elementsToChange.forEach((el) => {
-                    el.style.backgroundColor = color;
-                });
-
-                // Update the circle text to reflect the score
-                circle.textContent = `${score} / 10`;
-            }
-
-            // Function to get the query parameter value from the URL
-            function getQueryParam(name) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(name);
-            }
-
-            // Get the score from the query parameter and set the circle color and filling
-            const score = parseInt(getQueryParam("score"), 10) || 3; // Default to 0 if no score is provided
-            setCircleColor(score);
-        </script>
+        <script src="JS/resultpage.js"></script>
     </body>
 </html>

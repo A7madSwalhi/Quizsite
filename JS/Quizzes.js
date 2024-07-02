@@ -31,4 +31,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
             window.location.href = event.currentTarget.href;
         });
     });
+
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    const btns = document.querySelector(".btns");
+    let user = JSON.parse(sessionStorage.getItem("user"));
+
+    window.addEventListener("load", () => {
+        if (user && user.loginstate) {
+            btns.innerHTML = `<button type="button" onclick="logout() ">
+                            LogOut
+                        </button>`;
+            console.log(`from event`);
+        }
+    });
+
+    function logout() {
+        sessionStorage.clear();
+        location.href = "Home.html";
+    }
 });

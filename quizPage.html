@@ -4,17 +4,53 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Quiz Page</title>
-        <!-- <script>
+        <script>
             let user = JSON.parse(sessionStorage.getItem("user"));
 
             if (!sessionStorage.getItem("user")) {
                 location.href = "./preventNonUser.html";
             }
-        </script> -->
+        </script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="Styles/Quizpage.css" />
     </head>
 
     <body>
+        <header>
+            <div class="container-head">
+                <div class="resp-cont">
+                    <a href="#"
+                        ><img
+                            class="img-logo"
+                            src="Images/fulllogo.png"
+                            alt="GoalGenius Logo"
+                    /></a>
+                    <button class="burger-menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#howtouse">How To Use</a></li>
+                    </ul>
+                </nav>
+                <div class="btns">
+                    <button onclick="location.href='signup.html'">
+                        SignUp
+                    </button>
+                    <button onclick="location.href='login.html'">LogIn</button>
+                </div>
+            </div>
+        </header>
         <div class="quiz-app">
             <div class="quiz-info">
                 <div class="category">Category: <span>HTML</span></div>

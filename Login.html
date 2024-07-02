@@ -16,43 +16,40 @@
         <link rel="stylesheet" href="Styles/login.css" />
     </head>
     <body>
-        <section>
+        <form action="Welcome.html">
             <!-- Company logo -->
-            <img src="Images/greenball.png" />
+            <img src="Images/greenball.png" class="iconBall" />
+            <img src="Images/whiteball.png" class="iconBallWihte" />
+            <h2><span>Goal</span>Genius</h2>
+            <a href="Home.html">Home</a>
             <hr />
             <!-- Heading for the login form -->
             <h1>Log in</h1>
-            <form action="Welcome.html">
-                <!-- Subtitle text -->
-                <p>Please Fill Your Information:</p>
-                <!-- Input container for email or phone -->
-                <div class="input-container">
-                    <input type="text" id="email" placeholder="Email" />
-                    <div id="emailOrPhone-error" class="error-message"></div>
-                </div>
-                <!-- Input container for password -->
-                <div class="input-container">
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Password"
-                    />
-                    <div id="password-error" class="error-message"></div>
-                </div>
-                <!-- Log in button -->
-                <button type="submit" id="login">Log in</button>
-                <!-- Sign-up message -->
-                <div id="sign-up-message" class="sign-up-message">
-                    Invalid login credentials. Please sign up if you don't have
-                    an account.
-                </div>
-                <hr />
-                <!-- Sign up button -->
-                <button onclick="location.href = 'Signup.html' ">
-                    Sign up
-                </button>
-            </form>
-        </section>
+            <!-- Subtitle text -->
+            <p>Please Fill Your Information:</p>
+            <!-- Input container for email or phone -->
+            <div class="input-container">
+                <input type="text" id="email" placeholder="Email" />
+                <div id="emailOrPhone-error" class="error-message"></div>
+            </div>
+            <!-- Input container for password -->
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Password" />
+                <div id="password-error" class="error-message"></div>
+            </div>
+            <!-- Log in button -->
+            <button type="submit" id="login">Log in</button>
+            <!-- Sign-up message -->
+            <div id="sign-up-message" class="sign-up-message">
+                Invalid login credentials. Please sign up if you don't have an
+                account.
+            </div>
+            <hr />
+            <!-- Sign up button -->
+            <button onclick="location.href = 'Signup.html' " id="signInBtn">
+                Sign up
+            </button>
+        </form>
         <script src="JS/login.js"></script>
     </body>
 </html>

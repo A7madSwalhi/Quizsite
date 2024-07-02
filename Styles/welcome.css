@@ -28,9 +28,9 @@ a {
 
 header {
     position: absolute;
-    left: 0;
     width: 100%;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .container-head {
@@ -39,20 +39,11 @@ header {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    flex-direction: row;
 }
 
 .img-logo {
-    width: 60px;
-    height: 60px;
-}
-
-.logo {
-    font-weight: bold;
-    margin-right: 33px;
-}
-
-.logo span {
-    color: #00df69;
+    width: 210px;
 }
 
 .container-head .btns {
@@ -69,15 +60,15 @@ nav ul li a {
     padding: 10px;
     font-weight: bold;
     margin-right: 33px;
+    color: black;
 }
 
 nav ul li a:hover {
-    background-color: rgb(0 0 0 /0.4);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container-head a {
-    color: white;
+    color: black;
 }
 
 .btns button {
@@ -92,11 +83,69 @@ nav ul li a:hover {
     font-weight: bold;
     border: none;
     background-color: #00df69;
+    color: white;
 }
 
 .btns button:hover {
-    background-color: rgb(0 0 0 /0.4);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 825px) {
+    .container-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img-logo {
+        width: 200px;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-top: 6%;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .btns button {
+        width: 44%;
+    }
+
+    .resp-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
 
 .home {

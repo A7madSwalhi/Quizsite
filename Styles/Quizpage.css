@@ -1,49 +1,201 @@
+.count {
+    padding: 10px 5px;
+}
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: Tahoma, Arial;
+
+ul {
+    list-style: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: url(https://i.pinimg.com/564x/fe/e2/df/fee2df9be7d5ab185f3bf3cb25cf76c1.jpg);
+
+    background-size: cover;
+    font-family: "Commissioner", sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+}
+
+.container-head {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.img-logo {
+    width: 210px;
+}
+
+.container-head .btns {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    padding: 10px;
+    font-weight: bold;
+    margin-right: 33px;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-head a {
+    color: black;
+}
+
+.btns button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-left: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #00df69;
+    color: white;
+}
+
+.btns button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 825px) {
+    .container-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img-logo {
+        width: 200px;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-top: 6%;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .btns button {
+        width: 44%;
+    }
+
+    .resp-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
 .quiz-app {
     margin: 20px auto;
-    width: 800px;
-    background-color: #abf7ae;
+    width: 700px;
+    background-color: #a0ffa3;
     padding: 15px;
 }
+
 .quiz-app .quiz-info {
     display: flex;
     background-color: #fff;
     padding: 20px;
 }
+
 .quiz-app .quiz-info .category {
     flex: 1;
 }
+
 .quiz-app .quiz-info .count {
     flex: 1;
     text-align: right;
 }
+
 .quiz-app .quiz-area {
     background-color: #fff;
     padding: 20px;
     margin-top: 15px;
 }
+
 .quiz-app .quiz-area h2 {
     margin: 0;
 }
+
 .quiz-app .answers-area {
     background-color: #fff;
     padding: 0 20px 20px;
 }
+
 .quiz-app .answers-area .answer {
     background-color: #abf7ae;
     padding: 15px;
 }
+
 .quiz-app .answers-area .answer:not(:last-child) {
     border-bottom: 1px solid #abf7ae;
 }
+
 .quiz-app .answers-area .answer input[type="Radio"]:checked + label {
-    color: #009245;
+    color: #000000;
 }
+
 .quiz-app .answers-area .answer label {
     cursor: pointer;
     font-weight: bold;
@@ -53,8 +205,9 @@ body {
     position: relative;
     top: -1px;
 }
+
 .quiz-app .submit-button {
-    background-color: #009245;
+    background-color: #000000;
     display: block;
     width: 100%;
     padding: 15px;
@@ -66,19 +219,27 @@ body {
     border-radius: 6px;
     margin: 20px auto;
 }
+
+.quiz-app .submit-button:hover {
+    background-color: #000000bd;
+}
+
 .quiz-app .submit-button:focus {
     outline: none;
 }
+
 .quiz-app .bullets {
     border-top: 1px solid #dfdfdf;
     background-color: #fff;
     display: flex;
     padding: 20px;
 }
+
 .quiz-app .bullets .spans {
     flex: 1;
     display: flex;
 }
+
 .quiz-app .bullets .spans span {
     width: 20px;
     height: 20px;
@@ -86,18 +247,23 @@ body {
     margin-right: 5px;
     border-radius: 50%;
 }
+
 .quiz-app .bullets .spans span.on {
     background-color: #009245;
 }
+
 .quiz-app .results span {
     font-weight: bold;
 }
+
 .quiz-app .results span.bad {
     color: #dc0a0a;
 }
+
 .quiz-app .results span.good {
     color: #009688;
 }
+
 .quiz-app .results span.perfect {
     color: #009245;
 }

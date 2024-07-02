@@ -1,3 +1,4 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +8,10 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "Commissioner", sans-serif;
-
     color: white;
-    /*background-image: url(Images/Bitch.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%; */
 }
 
 ul {
@@ -26,11 +22,12 @@ a {
     text-decoration: none;
 }
 
+/* Navbar styles */
 header {
-    position: absolute;
-    left: 0;
+    position: fixed;
     width: 100%;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .container-head {
@@ -39,20 +36,11 @@ header {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    flex-direction: row;
 }
 
 .img-logo {
-    width: 60px;
-    height: 60px;
-}
-
-.logo {
-    font-weight: bold;
-    margin-right: 33px;
-}
-
-.logo span {
-    color: #00df69;
+    width: 210px;
 }
 
 .container-head .btns {
@@ -69,15 +57,15 @@ nav ul li a {
     padding: 10px;
     font-weight: bold;
     margin-right: 33px;
+    color: black;
 }
 
 nav ul li a:hover {
-    background-color: rgb(0 0 0 /0.4);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container-head a {
-    color: white;
+    color: black;
 }
 
 .btns button {
@@ -92,18 +80,76 @@ nav ul li a:hover {
     font-weight: bold;
     border: none;
     background-color: #00df69;
-}
-
-.btns button:hover {
-    background-color: rgb(0 0 0 /0.4);
     color: white;
 }
 
+.btns button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 825px) {
+    .container-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img-logo {
+        width: 200px;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-top: 6%;
+    }
+
+    .btns {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .btns button {
+        width: 44%;
+    }
+
+    .resp-cont {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Responsive styles */
 .home {
     min-height: 100vh;
     background-image: url("../Images/Bitch.jpg");
     background-size: cover;
-    /* filter: blur(3px); */
     background-position: center;
 }
 
@@ -120,8 +166,9 @@ nav ul li a:hover {
     justify-content: center;
     transform: translateY(-3%);
 }
+
 .text-con h1 {
-    font-size: 72px;
+    font-size: 70px;
     text-transform: capitalize;
 }
 
@@ -129,6 +176,7 @@ nav ul li a:hover {
     display: flex;
     margin-top: 15%;
 }
+
 .buttons button {
     display: flex;
     width: 240px;
@@ -152,7 +200,7 @@ nav ul li a:hover {
 }
 
 .buttons button:hover {
-    background-color: rgb(0 0 0 /0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
 }
 
@@ -179,6 +227,10 @@ nav ul li a:hover {
     text-transform: capitalize;
     color: #009245;
     font-size: 2.7rem;
+}
+
+section {
+    margin-top: 8rem;
 }
 
 /*
@@ -245,4 +297,83 @@ about section
     line-height: 1.6;
     color: #333;
     margin: 0.25rem 0; /* Reduced top and bottom margin */
+}
+
+/* footer */
+/* footer */
+/* footer */
+
+footer {
+    background-color: #005203;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0px 0px 0px;
+}
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo h2 {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 5px;
+}
+
+.footer-logo h2 span {
+    color: #ffeb3b;
+    /* لون مختلف لكلمة Genius */
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.footer-social a:hover {
+    color: #ffeb3b;
+    /* لون مختلف عند التمرير */
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
 }

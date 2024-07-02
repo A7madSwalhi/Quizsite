@@ -22,47 +22,44 @@
         <link rel="stylesheet" href="Styles/Signup.css" />
     </head>
     <body>
-        <section>
-            <img src="Images/greenball.png" />
+        <form action="Login.html">
+            <img src="Images/greenball.png" class="iconBall" />
+            <img src="Images/whiteball.png" class="iconBallWihte" />
+
+            <h2><span>Goal</span>Genius</h2>
+            <a href="Home.html">Home</a>
+
             <hr />
+
             <h1>Sign up</h1>
-            <form action="Login.html">
-                <p>Please Fill Your Information:</p>
-                <div class="input-container">
-                    <input type="text" id="username" placeholder="User Name" />
-                    <div id="username-error" class="error-message"></div>
-                </div>
-                <div class="input-container">
-                    <input type="email" id="email" placeholder="Email" />
-                    <div id="email-error" class="error-message"></div>
-                </div>
-                <div class="input-container">
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Password"
-                    />
-                    <div id="password-error" class="error-message"></div>
-                </div>
-                <div class="input-container">
-                    <input
-                        type="password"
-                        id="confirm-password"
-                        placeholder="Confirm Password"
-                    />
-                    <div
-                        id="confirm-password-error"
-                        class="error-message"
-                    ></div>
-                </div>
-                <button
-                    type="submit"
-                    onsubmit="location.href = 'welocme.html' "
-                >
-                    Sign up
-                </button>
-            </form>
-        </section>
+            <p>Please Fill Your Information:</p>
+            <div class="input-container">
+                <input type="text" id="username" placeholder="User Name" />
+                <div id="username-error" class="error-message"></div>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Email" />
+                <div id="email-error" class="error-message"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Password" />
+                <div id="password-error" class="error-message"></div>
+            </div>
+            <div class="input-container">
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Confirm Password"
+                />
+                <div id="confirm-password-error" class="error-message"></div>
+            </div>
+            <button type="submit" onsubmit="location.href = 'welocme.html' ">
+                Sign up
+            </button>
+            <button id="login" onclick="location.href = 'login.html' ">
+                Log in
+            </button>
+        </form>
         <div class="notification">
             <i class="fa-solid fa-check"></i>
             <div class="message">

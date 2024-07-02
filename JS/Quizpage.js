@@ -906,7 +906,7 @@ function getQuestions() {
     let questionsObject = questions;
     let qCount = questionsObject.length;
 
-    createBullets(qCount); // Create bullets for navigation
+    createBullets(qCount, currentIndex); // Create bullets for navigation
 
     addQuestionData(questionsObject[currentIndex], qCount); // Display first question
 
@@ -918,9 +918,8 @@ function getQuestions() {
 }
 
 // Function to create navigation bullets
-function createBullets(num) {
-    countSpan.innerHTML = num;
-
+function createBullets(num, currentIndex) {
+    countSpan.innerHTML = currentIndex + 1;
     for (let i = 0; i < num; i++) {
         let theBullet = document.createElement("span");
 
@@ -997,6 +996,9 @@ function preventAnswer() {
 
             // Increase index to move to the next question
             currentIndex++;
+
+            // Update question number
+            countSpan.innerHTML = currentIndex + 1;
 
             // Clear quiz area for next question
             quizArea.innerHTML = "";
@@ -1086,4 +1088,52 @@ function countdown(duration) {
             }, 100); // 100 milliseconds delay
         }
     }, 1000);
+}
+
+window.addEventListener("load", () => {
+    if (user && user.loginstate) {
+        uname.innerHTML = user.username;
+        btns.innerHTML = `<button type="button" onclick="logout() ">
+                        LogOut
+                    </button>`;
+        console.log(`from event`);
+    }
+});
+
+function logout() {
+    sessionStorage.clear();
+    location.href = "Home.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const btns = document.querySelector(".btns");
+
+    burgerMenu.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    let user = JSON.parse(sessionStorage.getItem("user"));
+
+    if (user && user.loginstate) {
+        btns.innerHTML = `<button type="button" onclick="logout() ">
+            LogOut
+        </button>`;
+        console.log(`from event`);
+    }
+});
+
+function logout() {
+    sessionStorage.clear();
+    location.href = "Home.html";
 }
