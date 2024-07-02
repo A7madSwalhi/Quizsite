@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f2f1;
+    font-family: "Inter", sans-serif;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url("markus-spiske-KWQ2kQtxiKE-unsplash_1.png") center/cover
+        no-repeat;
+    z-index: -1;
+}
+
+.container {
+    border: 2px solid #005f2d;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.quizzes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quiz-item {
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease;
+    text-decoration: none;
+    /* Ensure links don't have underlines */
+}
+
+.quiz-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.25s ease;
+    z-index: -1;
+}
+
+.quiz-item-1::before {
+    background-image: url("../Images/worldcup.png");
+}
+
+.quiz-item-2::before {
+    background-image: url("../Images/champ.png");
+}
+
+.quiz-item-3::before {
+    background-image: url("../Images/players.png");
+}
+
+.quiz-item-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    color: #fff;
+    transition: background-color 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.quiz-item-content p {
+    margin: 0;
+    font-weight: 200;
+}
+
+.quiz-item-content span {
+    font-weight: bold;
+    font-size: large;
+}
+
+.quiz-item:hover::before {
+    transform: scale(1.2);
+}
+
+.quiz-item:hover .quiz-item-content {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    .quiz-item {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .quiz-item {
+        width: 160px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .quiz-item {
+        width: 140px;
+        height: 210px;
+    }
+}

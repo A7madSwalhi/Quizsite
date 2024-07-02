@@ -25,7 +25,7 @@ const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 const confirmPasswordError = document.getElementById("confirm-password-error");
 
-let mailreg = /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+let mailreg = /^([A-za-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 let passreg =
     /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
 const usernameRegex = /^[a-zA-Z0-9]{4,}$/;

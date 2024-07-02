@@ -7,7 +7,7 @@ body {
 .quiz-app {
     margin: 20px auto;
     width: 800px;
-    background-color: #f8f8f8;
+    background-color: #abf7ae;
     padding: 15px;
 }
 .quiz-app .quiz-info {
@@ -35,14 +35,14 @@ body {
     padding: 0 20px 20px;
 }
 .quiz-app .answers-area .answer {
-    background-color: #f9f9f9;
+    background-color: #abf7ae;
     padding: 15px;
 }
 .quiz-app .answers-area .answer:not(:last-child) {
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid #abf7ae;
 }
 .quiz-app .answers-area .answer input[type="Radio"]:checked + label {
-    color: #0075ff;
+    color: #009245;
 }
 .quiz-app .answers-area .answer label {
     cursor: pointer;
@@ -54,7 +54,7 @@ body {
     top: -1px;
 }
 .quiz-app .submit-button {
-    background-color: #0075ff;
+    background-color: #009245;
     display: block;
     width: 100%;
     padding: 15px;
@@ -87,7 +87,7 @@ body {
     border-radius: 50%;
 }
 .quiz-app .bullets .spans span.on {
-    background-color: #0075ff;
+    background-color: #009245;
 }
 .quiz-app .results span {
     font-weight: bold;
@@ -99,5 +99,5 @@ body {
     color: #009688;
 }
 .quiz-app .results span.perfect {
-    color: #0075ff;
+    color: #009245;
 }

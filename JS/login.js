@@ -9,7 +9,7 @@ const passwordError = document.getElementById("password-error");
 const signUpMessage = document.getElementById("sign-up-message");
 
 // Regex patterns for validation
-let mailreg = /^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+let mailreg = /^([A-Za-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 let passreg =
     /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
 

@@ -1,31 +1,28 @@
-/* const apiKey = "AIzaSyAUa1va6hFCjTYzd8GwWeBinsoaXXAxBAY";
-const videoId = "agnrsaSxp-I"; // Replace with the actual video ID
+const API_KEY = "AIzaSyDRY84xtRKBJyM1J-_llWS0KhbjSRQF3qs";
+const VIDEO_ID = "IK0XWNi1Vno"; // Example video ID
 
-async function fetchVideoDetails(apiKey, videoId) {
-    const url = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&part=snippet,contentDetails,statistics&key=${apiKey}`;
+function loadVideo() {
+    fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${VIDEO_ID}&key=${API_KEY}`
+    )
+        .then((response) => response.json())
+        .then((data) => {
+            const video = data.items[0];
+            if (video) {
+                // Get the existing iframe element
+                const iframe = document.querySelector(".video");
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(
-                "Network response was not ok " + response.statusText
-            );
-        }
-        const data = await response.json();
-        displayVideoDetails(data.items[0]);
-    } catch (error) {
-        console.error(
-            "There has been a problem with your fetch operation:",
-            error
-        );
-    }
+                // Update the src attribute of the iframe
+                iframe.src = `https://www.youtube.com/embed/${VIDEO_ID}`;
+                iframe.allowFullscreen = true;
+            } else {
+                console.error("Video not found");
+            }
+        })
+        .catch((error) => {
+            console.error("Error fetching video data:", error);
+        });
 }
 
-function displayVideoDetails(video) {
-    document.getElementsByTagName(
-        "ifream"
-    )[0].setAttribute('src') = `https://www.youtube.com/watch?v=${video.id.videoId}`;
-}
-
-fetchVideoDetails(apiKey, videoId);
- */
+// Load video when the page loads
+window.onload = loadVideo;

@@ -8,14 +8,27 @@
 });
  */
 
-localStorage.removeItem("quizid");
+document.addEventListener("DOMContentLoaded", (event) => {
+    // Remove previous quizid from localStorage
+    localStorage.removeItem("quizid");
 
-document.querySelectorAll(".quiz").forEach((button) => {
-    button.addEventListener("click", (event) => {
-        const buttonId = event.target.id;
-        const buttonText = event.target.innerText;
-        quiznumber = buttonId;
-        window.location.href = "quizinstruction.html";
-        window.localStorage.setItem("quizid", buttonId);
+    // Select all elements with class 'quiz'
+    const quizItems = document.querySelectorAll(".quiz");
+
+    // Add event listener to each quiz item
+    quizItems.forEach((quizItem) => {
+        quizItem.addEventListener("click", (event) => {
+            // Prevent the default action of the anchor tag
+            event.preventDefault();
+
+            // Get the ID of the clicked element
+            const quizId = event.currentTarget.id;
+
+            // Store the ID in localStorage
+            localStorage.setItem("quizid", quizId);
+
+            // Redirect to the href of the anchor tag
+            window.location.href = event.currentTarget.href;
+        });
     });
 });

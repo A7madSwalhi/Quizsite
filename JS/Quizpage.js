@@ -8,6 +8,145 @@
     });
 }); */
 
+/* Start Quiz */
+/* Start Quiz */
+/* Start Quiz */
+/* Start Quiz */
+/* Start Quiz */
+
+// intital variables
+
+// start Program
+/* prepareResult(questions, showResult);
+console.log(showResult);
+
+let currentQuestionIndex = 0;
+
+nextQuestion();
+
+function nextQuestion() {
+    const form = document.getElementById("quizForm");
+    const errorDiv = document.getElementById("error");
+    const selectedOption = form.querySelector('input[name="language"]:checked');
+
+    questionNumber.innerHTML = currentQuestionIndex + 1;
+
+    if (!selectedOption) {
+        errorDiv.style.display = "block";
+        return;
+    }
+    errorDiv.style.display = "none";
+    console.log(selectedOption.value);
+    questionNumber.innerHTML = currentQuestionIndex;
+    console.log(questions[currentQuestionIndex].answer);
+
+    updateResult(selectedOption, questions[currentQuestionIndex]);
+    updateAnswers(selectedOption, questions[currentQuestionIndex]);
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < numberOfQuestions) {
+        loadQuestion();
+        if (currentQuestionIndex === 9) {
+            button.innerText = "Submit";
+        }
+    } else {
+        currentQuestionIndex = 0;
+
+        console.log(`correct answer: ${result.correctAnswer}`);
+        console.log(`wrong answer: ${result.wrongAnswer}`);
+        window.localStorage.setItem("result", JSON.stringify(result));
+        window.localStorage.setItem("ansers", JSON.stringify(showResult));
+
+        result.correctAnswer = 0;
+        result.wrongAnswer = 0;
+        console.log(showResult);
+        showResult = [];
+        window.location.href = "resultPage.html";
+    }
+}
+
+function loadQuestion() {
+    const questionElement = document.getElementById("question");
+    const form = document.getElementById("quizForm");
+    questionElement.innerText = questions[currentQuestionIndex].question;
+
+    form.innerHTML = "";
+    questions[currentQuestionIndex].options.forEach((option) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="radio" name="language" value="${option}"> ${option}`;
+        form.appendChild(label);
+    });
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.onclick = nextQuestion;
+    button.innerText = "Next";
+    form.appendChild(button);
+}
+
+function updateResult(ele, question) {
+    if (ele.value === question.answer) {
+        result.correctAnswer++;
+    } else {
+        result.wrongAnswer++;
+    }
+}
+
+function updateAnswers(ele, que) {
+    if (ele.value === que.answer) {
+        showResult.push({
+            question: que.question,
+            select: ele.value,
+            answer: true,
+            correctAnswer: que.answer,
+        });
+    } else {
+        showResult.push({
+            question: que.question,
+            select: ele.value,
+            answer: false,
+            correctAnswer: que.answer,
+        });
+    }
+}
+
+// Bulid Function
+// Bulid Function
+// Bulid Function
+// Bulid Function
+
+function pageloadupdate() {
+    const questionElement = document.getElementById("question");
+    const form = document.getElementById("quizForm");
+    questionElement.innerText = questions[currentQuestionIndex].question;
+    questionNumber.innerHTML = currentQuestionIndex + 1;
+
+    form.innerHTML = "";
+    questions[currentQuestionIndex].options.forEach((option) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="radio" name="language" value="${option}"> ${option}`;
+        form.appendChild(label);
+    });
+
+    button.type = "button";
+    button.onclick = nextQuestion;
+    button.innerText = "Next";
+    form.appendChild(button);
+}
+
+
+
+function prepareResult(questionsarr, resarr) {
+    for (let i = 0; i < questionsarr.length; i++) {
+        resarr.push({
+            question: questionsarr[i].question,
+            select: " ",
+            answer: false,
+            correctAnswer: questionsarr[i].answer,
+        });
+    }
+} */
+
 const questions1 = [
     {
         question: "Who is the winner of the 2010 FIFA World Cup?",
@@ -420,7 +559,7 @@ const questions3 = [
         question:
             "Who holds the record for the most goals scored in a single FIFA World Cup tournament?",
         options: ["Just Fontaine", "Ronaldo", "Gerd Muller", "Pele"],
-        answer: "Just Fontaine ",
+        answer: "Just Fontaine",
     },
     {
         question:
@@ -431,7 +570,7 @@ const questions3 = [
             "Michel Platini",
             "Johan Cruyff",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -442,7 +581,7 @@ const questions3 = [
             "Mesut Ozil",
             "Frank Lampard",
         ],
-        answer: "Kevin De Bruyne ",
+        answer: "Kevin De Bruyne",
     },
     {
         question:
@@ -453,7 +592,7 @@ const questions3 = [
             "Sergio Aguero",
             "Alan Shearer",
         ],
-        answer: "Sergio Aguero ",
+        answer: "Sergio Aguero",
     },
     {
         question:
@@ -464,7 +603,7 @@ const questions3 = [
             "Andres Iniesta",
             "Xavi Hernandez",
         ],
-        answer: "lamine yamal ",
+        answer: "lamine yamal",
     },
     {
         question:
@@ -485,7 +624,7 @@ const questions3 = [
             "Bryan Robson",
             "Christian Benteke",
         ],
-        answer: "Hakan Sukur ",
+        answer: "Hakan Sukur",
     },
     {
         question:
@@ -496,7 +635,7 @@ const questions3 = [
             "Xavi Hernandez",
             "Andres Iniesta",
         ],
-        answer: "Sergio Ramos ",
+        answer: "Sergio Ramos",
     },
     {
         question:
@@ -507,13 +646,13 @@ const questions3 = [
             "Antoine Griezmann",
             "Alan Shearer",
         ],
-        answer: "Michel Platini ",
+        answer: "Michel Platini",
     },
     {
         question:
             "Which player has won the most Copa America titles as of 2023?",
         options: ["Lionel Messi", "Neymar", "Pelé", "Diego Maradona"],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -524,13 +663,13 @@ const questions3 = [
             "Robert Lewandowski",
             "Ruud van Nistelrooy",
         ],
-        answer: "Robert Lewandowski ",
+        answer: "Robert Lewandowski",
     },
     {
         question:
             "Which player has the most assists in the history of the FIFA World Cup?",
         options: ["Neymar", "Diego Maradona", "Thomas Müller", "Cafu"],
-        answer: "Thomas Müller ",
+        answer: "Thomas Müller",
     },
     {
         question:
@@ -541,7 +680,7 @@ const questions3 = [
             "Telmo Zarra",
             "Hugo Sánchez",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -552,7 +691,7 @@ const questions3 = [
             "Luka Modric",
             "Robert Lewandowski",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -563,7 +702,7 @@ const questions3 = [
             "Telmo Zarra",
             "Hugo Sánchez",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -580,7 +719,7 @@ const questions3 = [
         question:
             "Who is the youngest player to score a hat-trick in the UEFA Champions League?",
         options: ["Kylian Mbappe", "Raúl", "Erling Haaland", "Lionel Messi"],
-        answer: "Kylian Mbappe ",
+        answer: "Kylian Mbappe",
     },
     {
         question:
@@ -591,7 +730,7 @@ const questions3 = [
             "Thierry Henry",
             "David Beckham",
         ],
-        answer: "Cristiano Ronaldo ",
+        answer: "Cristiano Ronaldo",
     },
     {
         question:
@@ -613,7 +752,7 @@ const questions3 = [
             "Pierre-Emerick Aubameyang",
             "Mario Gomez",
         ],
-        answer: "Robert Lewandowski ",
+        answer: "Robert Lewandowski",
     },
     {
         question:
@@ -624,7 +763,7 @@ const questions3 = [
             "Paolo Maldini",
             "Gianluca Zambrotta",
         ],
-        answer: "Gianluigi Buffon ",
+        answer: "Gianluigi Buffon",
     },
     {
         question:
@@ -635,7 +774,7 @@ const questions3 = [
             "Luis Suárez",
             "Romário",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -646,7 +785,7 @@ const questions3 = [
             "Francesco Totti",
             "Gunnar Nordahl",
         ],
-        answer: "Gunnar Nordahl ",
+        answer: "Gunnar Nordahl",
     },
     {
         question:
@@ -657,7 +796,7 @@ const questions3 = [
             "Robert Lewandowski",
             "Ruud van Nistelrooy",
         ],
-        answer: "Cristiano Ronaldo ",
+        answer: "Cristiano Ronaldo",
     },
     {
         question:
@@ -668,13 +807,13 @@ const questions3 = [
             "Juan Román Riquelme",
             "Sergio Agüero",
         ],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
             "Which player has the most goals in a single Copa America tournament?",
         options: ["Pelé", "Lionel Messi", "Neymar", "Gabriel Batistuta"],
-        answer: "Lionel Messi ",
+        answer: "Lionel Messi",
     },
     {
         question:
@@ -696,7 +835,7 @@ const questions3 = [
             "Harry Kane",
             "Thierry Henry",
         ],
-        answer: "Mohamed Salah ",
+        answer: "Mohamed Salah",
     },
     {
         question:
@@ -707,7 +846,7 @@ const questions3 = [
             "Telmo Zarra",
             "Hugo Sánchez",
         ],
-        answer: "Telmo Zarra ",
+        answer: "Telmo Zarra",
     },
     {
         question:
@@ -718,180 +857,33 @@ const questions3 = [
             "Klaas-Jan Huntelaar",
             "Antoine Griezmann",
         ],
-        answer: "Radamel Falcao ",
+        answer: "Radamel Falcao",
     },
 ];
 
-const quizzes = [questions1, questions2, questions3];
+const quizzes = [questions1, questions2, questions3]; // Replace with your actual question arrays
 
 let showResult = [];
+let quiznumber = Number(window.localStorage.getItem("quizid"));
+let questions = shuffleArray(quizzes[quiznumber]).splice(0, 10); // Select 10 random questions
+let numberOfQuestions = questions.length;
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-/* Start Quiz */
-/* Start Quiz */
-/* Start Quiz */
-/* Start Quiz */
-/* Start Quiz */
+console.log(questions);
 
 const questionNumber = document.getElementById("cNumber");
 const totqes = document.getElementById("totq");
 
-// intital variables
-
-var quiznumber = Number(window.localStorage.getItem("quizid"));
-
-questions = shuffleArray(quizzes[quiznumber]).splice(0, 10);
-
-numberOfQuestions = questions.length;
-
-console.log(questions);
-
-// start Program
-/* prepareResult(questions, showResult);
-console.log(showResult);
-
-let currentQuestionIndex = 0;
-
-nextQuestion();
-
-function nextQuestion() {
-    const form = document.getElementById("quizForm");
-    const errorDiv = document.getElementById("error");
-    const selectedOption = form.querySelector('input[name="language"]:checked');
-
-    questionNumber.innerHTML = currentQuestionIndex + 1;
-
-    if (!selectedOption) {
-        errorDiv.style.display = "block";
-        return;
-    }
-    errorDiv.style.display = "none";
-    console.log(selectedOption.value);
-    questionNumber.innerHTML = currentQuestionIndex;
-    console.log(questions[currentQuestionIndex].answer);
-
-    updateResult(selectedOption, questions[currentQuestionIndex]);
-    updateAnswers(selectedOption, questions[currentQuestionIndex]);
-
-    currentQuestionIndex++;
-    if (currentQuestionIndex < numberOfQuestions) {
-        loadQuestion();
-        if (currentQuestionIndex === 9) {
-            button.innerText = "Submit";
-        }
-    } else {
-        currentQuestionIndex = 0;
-
-        console.log(`correct answer: ${result.correctAnswer}`);
-        console.log(`wrong answer: ${result.wrongAnswer}`);
-        window.localStorage.setItem("result", JSON.stringify(result));
-        window.localStorage.setItem("ansers", JSON.stringify(showResult));
-
-        result.correctAnswer = 0;
-        result.wrongAnswer = 0;
-        console.log(showResult);
-        showResult = [];
-        window.location.href = "resultPage.html";
-    }
-}
-
-function loadQuestion() {
-    const questionElement = document.getElementById("question");
-    const form = document.getElementById("quizForm");
-    questionElement.innerText = questions[currentQuestionIndex].question;
-
-    form.innerHTML = "";
-    questions[currentQuestionIndex].options.forEach((option) => {
-        const label = document.createElement("label");
-        label.innerHTML = `<input type="radio" name="language" value="${option}"> ${option}`;
-        form.appendChild(label);
-    });
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.onclick = nextQuestion;
-    button.innerText = "Next";
-    form.appendChild(button);
-}
-
-function updateResult(ele, question) {
-    if (ele.value === question.answer) {
-        result.correctAnswer++;
-    } else {
-        result.wrongAnswer++;
-    }
-}
-
-function updateAnswers(ele, que) {
-    if (ele.value === que.answer) {
-        showResult.push({
-            question: que.question,
-            select: ele.value,
-            answer: true,
-            correctAnswer: que.answer,
-        });
-    } else {
-        showResult.push({
-            question: que.question,
-            select: ele.value,
-            answer: false,
-            correctAnswer: que.answer,
-        });
-    }
-}
-
-// Bulid Function
-// Bulid Function
-// Bulid Function
-// Bulid Function
-
-function pageloadupdate() {
-    const questionElement = document.getElementById("question");
-    const form = document.getElementById("quizForm");
-    questionElement.innerText = questions[currentQuestionIndex].question;
-    questionNumber.innerHTML = currentQuestionIndex + 1;
-
-    form.innerHTML = "";
-    questions[currentQuestionIndex].options.forEach((option) => {
-        const label = document.createElement("label");
-        label.innerHTML = `<input type="radio" name="language" value="${option}"> ${option}`;
-        form.appendChild(label);
-    });
-
-    button.type = "button";
-    button.onclick = nextQuestion;
-    button.innerText = "Next";
-    form.appendChild(button);
-}
-
-
-
-function prepareResult(questionsarr, resarr) {
-    for (let i = 0; i < questionsarr.length; i++) {
-        resarr.push({
-            question: questionsarr[i].question,
-            select: " ",
-            answer: false,
-            correctAnswer: questionsarr[i].answer,
-        });
-    }
-} */
+let quizzesTitle = ["World Cup", "Champions League", "Team Celebration"];
 
 // Select Elements
 let countSpan = document.querySelector(".count span");
-let bullets = document.querySelector(".bullets");
 let bulletsSpanContainer = document.querySelector(".bullets .spans");
 let quizArea = document.querySelector(".quiz-area");
 let answersArea = document.querySelector(".answers-area");
 let submitButton = document.querySelector(".submit-button");
 let resultsContainer = document.querySelector(".results");
 let countdownElement = document.querySelector(".countdown");
+let category = document.querySelector(".category");
 
 // Set Options
 let currentIndex = 0;
@@ -899,213 +891,199 @@ let rightAnswers = 0;
 let countdownInterval;
 
 let result = {
-    qNumber: 0,
+    qNumber: numberOfQuestions,
     correctAnswer: 0,
     wrongAnswer: 0,
 };
 
-result.qNumber = numberOfQuestions;
+category.innerHTML = quizzesTitle[quiznumber];
 
+// Initialize quiz
+getQuestions();
+
+// Function to generate questions and start quiz
 function getQuestions() {
     let questionsObject = questions;
     let qCount = questionsObject.length;
 
-    // Create Bullets + Set Questions Count
-    createBullets(qCount);
+    createBullets(qCount); // Create bullets for navigation
 
-    // Add Question Data
-    addQuestionData(questionsObject[currentIndex], qCount);
+    addQuestionData(questionsObject[currentIndex], qCount); // Display first question
 
-    // Start CountDown
+    updateSubmitButtonText();
 
-    // Click On Submit
-    submitButton.onclick = () => {
-        // Get Right Answer
-        let theRightAnswer = questionsObject[currentIndex].answer;
-        console.log(theRightAnswer);
+    preventAnswer(); // Start listening for answers
 
-        // Check The Answer
-        checkAnswer(questionsObject[currentIndex], theRightAnswer, qCount);
-
-        // Increase Index
-        currentIndex++;
-
-        // Remove Previous Question
-        quizArea.innerHTML = "";
-        answersArea.innerHTML = "";
-
-        // Add Question Data
-        addQuestionData(questionsObject[currentIndex], qCount);
-
-        // Handle Bullets Class
-        handleBullets();
-
-        // Start CountDown
-
-        // Show Results
-        showResults(qCount);
-    };
+    countdown(4 * 60); // Start the timer with 5 minutes (5 * 60 seconds)
 }
 
-getQuestions();
-
+// Function to create navigation bullets
 function createBullets(num) {
     countSpan.innerHTML = num;
 
-    // Create Spans
     for (let i = 0; i < num; i++) {
-        // Create Bullet
         let theBullet = document.createElement("span");
 
-        // Check If Its First Span
         if (i === 0) {
             theBullet.className = "on";
         }
 
-        // Append Bullets To Main Bullet Container
         bulletsSpanContainer.appendChild(theBullet);
     }
 }
 
+// Function to display question and answer options
 function addQuestionData(obj, count) {
     if (currentIndex < count) {
-        // Create H2 Question Title
         let questionTitle = document.createElement("h2");
-
-        // Create Question Text
-        let questionText = document.createTextNode(obj["question"]);
-
-        // Append Text To H2
-        questionTitle.appendChild(questionText);
-
-        // Append The H2 To The Quiz Area
+        questionTitle.appendChild(document.createTextNode(obj["question"]));
         quizArea.appendChild(questionTitle);
 
-        // Create The Answers
-        for (let i = 0; i <= 3; i++) {
-            // Create Main Answer Div
+        for (let i = 0; i < obj.options.length; i++) {
             let mainDiv = document.createElement("div");
-
-            // Add Class To Main Div
             mainDiv.className = "answer";
 
-            // Create Radio Input
             let radioInput = document.createElement("input");
-
-            // Add Type + Name + Id + Data-Attribute
-            radioInput.name = "question";
+            radioInput.name = "radioOption"; // Use the same name for all options to group them
             radioInput.type = "radio";
             radioInput.id = `answer_${i}`;
-            radioInput.dataset.answer = obj.options[i];
+            radioInput.value = obj.options[i];
 
-            // Make First Option Selected
-            if (i === 1) {
-            }
-
-            // Create Label
             let theLabel = document.createElement("label");
-
-            // Add For Attribute
             theLabel.htmlFor = `answer_${i}`;
+            theLabel.appendChild(document.createTextNode(obj.options[i]));
 
-            // Create Label Text
-            let theLabelText = document.createTextNode(obj.options[i]);
-
-            // Add The Text To Label
-            theLabel.appendChild(theLabelText);
-
-            // Add Input + Label To Main Div
             mainDiv.appendChild(radioInput);
             mainDiv.appendChild(theLabel);
-
-            // Append All Divs To Answers Area
             answersArea.appendChild(mainDiv);
         }
     }
 }
 
-function checkAnswer(obj, rAnswer, count) {
-    let answers = document.getElementsByName("question");
-    let theChoosenAnswer;
+// Function to handle answer submission and validation
+function preventAnswer() {
+    submitButton.disabled = true; // Initially disable submit button
 
-    for (let i = 0; i < answers.length; i++) {
-        if (answers[i].checked) {
-            theChoosenAnswer = answers[i].dataset.answer;
-        }
-    }
+    answersArea.addEventListener("change", function (event) {
+        submitButton.disabled = false; // Enable submit button when an option is selected
+    });
 
-    if (rAnswer === theChoosenAnswer) {
-        result.correctAnswer++;
+    submitButton.addEventListener("click", function () {
+        let selectedOption = document.querySelector(
+            'input[name="radioOption"]:checked'
+        );
 
-        showResult.push({
-            ques: obj["question"],
-            select: theChoosenAnswer,
-            answer: true,
-            correctAnswer: rAnswer,
-        });
-    } else {
-        result.wrongAnswer++;
+        if (selectedOption) {
+            let theRightAnswer = questions[currentIndex].answer;
+            console.log(theRightAnswer);
 
-        showResult.push({
-            ques: obj["question"],
-            select: theChoosenAnswer,
-            answer: false,
-            correctAnswer: rAnswer,
-        });
-    }
-    console.log(result);
-    console.log(showResult);
-}
+            if (selectedOption.value === theRightAnswer) {
+                result.correctAnswer++;
+                showResult.push({
+                    ques: questions[currentIndex].question,
+                    select: selectedOption.value,
+                    answer: true,
+                    correctAnswer: theRightAnswer,
+                });
+            } else {
+                result.wrongAnswer++;
+                showResult.push({
+                    ques: questions[currentIndex].question,
+                    select: selectedOption.value,
+                    answer: false,
+                    correctAnswer: theRightAnswer,
+                });
+            }
 
-function handleBullets() {
-    let bulletsSpans = document.querySelectorAll(".bullets .spans span");
-    let arrayOfSpans = Array.from(bulletsSpans);
-    arrayOfSpans.forEach((span, index) => {
-        if (currentIndex === index) {
-            span.className = "on";
+            // Increase index to move to the next question
+            currentIndex++;
+
+            // Clear quiz area for next question
+            quizArea.innerHTML = "";
+            answersArea.innerHTML = "";
+
+            // Check if quiz is completed
+            showResults(numberOfQuestions);
+
+            // Display next question if not completed
+            if (currentIndex < numberOfQuestions) {
+                addQuestionData(questions[currentIndex], numberOfQuestions);
+                handleBullets();
+            }
         }
     });
 }
 
-function showResults(count) {
-    let theResults;
-    if (currentIndex === count) {
-        quizArea.remove();
-        answersArea.remove();
-        submitButton.remove();
-        bullets.remove();
+// Function to handle navigation bullets
+function handleBullets() {
+    let bulletsSpans = document.querySelectorAll(".bullets .spans span");
 
-        if (rightAnswers > count / 2 && rightAnswers < count) {
-            theResults = `<span class="good">Good</span>, ${rightAnswers} From ${count}`;
-        } else if (rightAnswers === count) {
-            theResults = `<span class="perfect">Perfect</span>, All Answers Is Good`;
+    bulletsSpans.forEach((span, index) => {
+        if (index === currentIndex) {
+            span.className = "on";
         } else {
-            theResults = `<span class="bad">Bad</span>, ${rightAnswers} From ${count}`;
+            span.className = "";
         }
+    });
+}
 
-        resultsContainer.innerHTML = theResults;
-        resultsContainer.style.padding = "10px";
-        resultsContainer.style.backgroundColor = "white";
-        resultsContainer.style.marginTop = "10px";
+// Function to display quiz results
+function showResults(count) {
+    if (currentIndex === count) {
+        localStorage.setItem("result", JSON.stringify(result));
+        localStorage.setItem("answers", JSON.stringify(showResult));
+        location.href = "resultPage.html"; // Redirect to results page
     }
 }
 
-function countdown(duration, count) {
-    if (currentIndex < count) {
-        let minutes, seconds;
-        countdownInterval = setInterval(function () {
-            minutes = parseInt(duration / 60);
-            seconds = parseInt(duration % 60);
-
-            minutes = minutes < 10 ? `0${minutes}` : minutes;
-            seconds = seconds < 10 ? `0${seconds}` : seconds;
-
-            countdownElement.innerHTML = `${minutes}:${seconds}`;
-
-            if (--duration < 0) {
-                clearInterval(countdownInterval);
-                submitButton.click();
-            }
-        }, 1000);
+// Function to shuffle an array (already provided in your code)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+}
+
+function updateSubmitButtonText() {
+    if (currentIndex === numberOfQuestions - 1) {
+        submitButton.innerText = "Submit";
+    } else {
+        submitButton.innerText = "Next";
+    }
+}
+
+function countdown(duration) {
+    let minutes, seconds;
+    countdownInterval = setInterval(function () {
+        minutes = parseInt(duration / 60);
+        seconds = parseInt(duration % 60);
+
+        minutes = minutes < 10 ? `0${minutes}` : minutes;
+        seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+        countdownElement.innerHTML = `${minutes}:${seconds}`;
+
+        if (--duration < 0) {
+            clearInterval(countdownInterval);
+            for (let i = currentIndex; i < numberOfQuestions; i++) {
+                result.wrongAnswer++;
+                showResult.push({
+                    ques: questions[currentIndex].question,
+                    select: " ",
+                    answer: false,
+                    correctAnswer: questions[currentIndex].answer,
+                });
+            }
+
+            // Save the data to localStorage
+            localStorage.setItem("result", JSON.stringify(result));
+            localStorage.setItem("answers", JSON.stringify(showResult));
+
+            // Delay the redirection slightly to ensure the data is saved
+            setTimeout(function () {
+                window.location.href = "resultPage.html";
+            }, 100); // 100 milliseconds delay
+        }
+    }, 1000);
 }
